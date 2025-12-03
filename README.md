@@ -2,6 +2,14 @@
 
 這裡收錄了兩個 Python 實作專案：氣象視覺化看板與網頁爬蟲工具。
 
+#### 安裝必要套件
+在終端機中，切換到專案資料夾，執行以下指令：
+
+```bash
+python -m venv venv
+pip install -r requirements.txt
+```
+
 ---
 
 ## 🌤️ 台灣氣象預報地圖看板 (Taiwan Weather Map Dashboard)
@@ -18,14 +26,6 @@
 
 #### 前置需求
 * 已安裝 Python (建議版本 3.8 以上)
-
-#### 安裝必要套件
-在終端機中，切換到專案資料夾，執行以下指令：
-
-```bash
-python -m venv venv
-pip install streamlit urllib3 requests pandas folium streamlit-folium
-```
 
 ###  執行方式
 在終端機中，切換到專案資料夾，執行以下指令：
@@ -60,12 +60,7 @@ API ID：F-C0032-001 (一般天氣預報-今明36小時天氣預報)
 #### 前置需求
 * 已安裝 Python (建議版本 3.8 以上)
 
-#### 安裝必要套件
-在終端機中，切換到專案資料夾，執行以下指令：
-
-```bash
-pip install requests lxml
-```
+#### 執行方式
 
 在終端機中，切換到專案資料夾，執行以下指令：
 

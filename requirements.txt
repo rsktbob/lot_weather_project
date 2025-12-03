@@ -1,0 +1,7 @@
+streamlit
+urllib3
+requests
+pandas
+folium
+streamlit-folium
+lxml
