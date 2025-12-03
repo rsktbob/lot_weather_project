@@ -20,25 +20,20 @@
 * 已安裝 Python (建議版本 3.8 以上)
 
 #### 安裝必要套件
-開啟終端機 (Terminal) 或命令提示字元 (CMD)，執行以下指令：
+在終端機中，切換到專案資料夾，執行以下指令：
 
 ```bash
-pip install streamlit folium streamlit-folium pandas requests
-專案檔案結構
-app.py
-
-README.md (本說明檔)
-
-注意：data.db 會在程式執行後自動產生
+python -m venv venv
+pip install streamlit urllib3 requests pandas folium streamlit-folium
+```
 
 ###  執行方式
-在終端機中，切換到專案資料夾。
+在終端機中，切換到專案資料夾，執行以下指令：
 
-執行以下指令：
-
-Bash
-
+```bash
 streamlit run app.py
+```
+
 執行後，瀏覽器會自動開啟應用程式 (預設網址通常為 http://localhost:8501)。
 
 初次使用：如果畫面顯示「資料庫為空」，請點擊側邊欄的「🔄 更新氣象資料」按鈕。
@@ -60,24 +55,21 @@ API ID：F-C0032-001 (一般天氣預報-今明36小時天氣預報)
 
 技術堆疊：使用 requests + BeautifulSoup，簡單快速。
 
-### 環境需求
-Python 3.8 以上
+### 環境建立與安裝
 
-Python 套件：
+#### 前置需求
+* 已安裝 Python (建議版本 3.8 以上)
 
-Bash
+#### 安裝必要套件
+在終端機中，切換到專案資料夾，執行以下指令：
 
-pip install requests beautifulsoup4
-注意: 此版本不需要安裝 lxml
+```bash
+pip install requests lxml
+```
 
-使用方法
-下載或複製本專案。
+在終端機中，切換到專案資料夾，執行以下指令：
 
-開啟終端機，切換到 scrape_movie.py 所在資料夾。
-
-執行：
-
-Bash
-
+```bash
 python scrape_movie.py
+```
 執行完成後，目錄下會生成 movie.csv，包含所有抓取到的電影資料。
