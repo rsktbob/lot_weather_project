@@ -1,0 +1,85 @@
+🌤️ 台灣氣象預報地圖看板 (Taiwan Weather Map Dashboard)
+
+這是一個基於 Python Streamlit 的網頁應用程式，模仿中央氣象署的觀測介面。它能夠從氣象署 Open Data API 抓取資料，儲存於本地 SQLite 資料庫，並在互動式地圖上視覺化顯示全台各縣市的氣溫與天氣概況。
+
+功能特色
+
+視覺化地圖：結合 Folium 地圖，直接在地圖上顯示各縣市的氣溫與天氣圖示。
+
+動態顏色標記：氣溫圓點顏色會隨溫度高低變化（藍 → 綠 → 橘 → 紅）。
+
+本地資料庫：使用 SQLite (data.db) 儲存資料，減少 API 呼叫次數並加速網頁載入。
+
+環境建立與安裝
+前置需求
+
+已安裝 Python (建議版本 3.8 以上)
+
+安裝必要套件
+
+開啟終端機 (Terminal) 或命令提示字元 (CMD)，執行以下指令：
+
+pip install streamlit folium streamlit-folium pandas requests
+
+專案檔案結構
+
+app.py
+
+README.md (本說明檔)
+
+注意：data.db 會在程式執行後自動產生
+
+執行方式
+
+在終端機中，切換到專案資料夾，執行：
+
+streamlit run app.py
+
+
+執行後，瀏覽器會自動開啟應用程式 (預設網址通常為 http://localhost:8501)。
+
+初次使用：如果畫面顯示「資料庫為空」，請點擊側邊欄的「🔄 更新氣象資料」按鈕。
+
+資料來源
+
+資料來自交通部中央氣象署開放資料平臺 (CWA Open Data)
+
+使用 API ID：F-C0032-001 (一般天氣預報-今明36小時天氣預報)
+
+🎬 電影爬蟲 (Movie Scraper)
+
+這個 Python 腳本可以從 SSR1 Scrape Center 抓取電影資料（共 10 頁），並存成 CSV 檔案。
+
+功能
+
+擷取 電影名稱、類型、地區、片長、上映日期、評分
+
+將資料存入 movie.csv，使用 UTF-8 編碼，Excel 可直接開啟
+
+自動抓取 10 頁資料
+
+使用 requests + BeautifulSoup，簡單快速
+
+環境需求
+
+Python 3.7 以上
+
+Python 套件：
+
+pip install requests beautifulsoup4
+
+
+注意: 此版本不需要安裝 lxml
+
+使用方法
+
+下載或複製本專案
+
+開啟終端機，切換到 scrape_movie.py 所在資料夾
+
+執行：
+
+python scrape_movie.py
+
+
+執行完成後，會生成 movie.csv，包含所有電影資料
